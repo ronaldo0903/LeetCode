@@ -13,7 +13,7 @@ import junit.framework.Assert;
 
 import org.junit.Test;
 
-public class TestSolution {
+public class TestProb3Solution {
 
     @Test
     public void test() {

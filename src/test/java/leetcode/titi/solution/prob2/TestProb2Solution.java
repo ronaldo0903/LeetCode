@@ -2,20 +2,9 @@ package leetcode.titi.solution.prob2;
 
 import junit.framework.Assert;
 
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class TestSolution {
-
-    @BeforeClass
-    public static void setUpBeforeClass() throws Exception {
-    }
-
-    @AfterClass
-    public static void tearDownAfterClass() throws Exception {
-    }
-
+public class TestProb2Solution {
     @Test
     public void testAddTwoNumbers() {
         ListNode node_1_1 = new ListNode(2);
