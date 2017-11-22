@@ -15,63 +15,35 @@ Note: All inputs will be in lower-case.
 package leetcode.titi.solution.prob49;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class GroupAnagramsSolution {
-	public List<List<String>> groupAnagrams(String[] strs) {
-        List<List<String>> anagramsGroup = new ArrayList<List<String>>();
-        Map<Integer[], List<String>> stringVectorHashMap = new HashMap<Integer[], List<String>>();
-        for(int i=0; i<strs.length; i++) {
-        	Integer[] vecKey = convertToVector(strs[i]);
-        	if(!stringVectorHashMap.containsKey(vecKey)) {
-        		stringVectorHashMap.put(vecKey, new ArrayList<String>());
-        	}
-        	stringVectorHashMap.get(vecKey).add(strs[i]);
+    public List<List<String>> groupAnagrams(String[] strs) {
+        if (strs.length == 0) {
+            return new ArrayList();
         }
-        for(Integer[] vecKey : stringVectorHashMap.keySet()) {
-        	anagramsGroup.add(stringVectorHashMap.get(vecKey));
-        }
-        return anagramsGroup;
-    }
-	private Integer[] convertToVector(String str) {
-		Integer[] vector = new Integer[26];
-		for(int i=0; i<26; i++) {
-			vector[i] = 0;
-		}
-		for(int i=0; i<str.length(); i++) {
-			vector[str.charAt(i) - 'a'] ++;
-		}
-		return vector;
-	}
-	class StringVectorKey {
-		private int[] internalArray;
-		public StringVectorKey() {
-			internalArray = new int[26];
-		}
-		public void incrementCount(int pos) {
-			internalArray[pos] ++;
-		}
-		private int getCount(int pos) {
-			return internalArray[pos];
-		}
-		public final boolean equals(Object o) {
-            if (o == this)
-                return true;
-            if (o instanceof StringVectorKey) {
-            	StringVectorKey key= (StringVectorKey)o;
-                for(int i=0; i<key.internalArray.length; i++) {
-                	if(key.getCount(i) == this.getCount(i)) continue;
-                	return false;
-                }
-                return true;
+        Map<String, List> ans = new HashMap<String, List>();
+        int[] count = new int[26];
+        for (String s : strs) {
+            Arrays.fill(count, 0);
+            for (char c : s.toCharArray()) {
+                count[c - 'a']++;
             }
-            return false;
+
+            StringBuilder sb = new StringBuilder("");
+            for (int i = 0; i < 26; i++) {
+                sb.append('#');
+                sb.append(count[i]);
+            }
+            String key = sb.toString();
+            if (!ans.containsKey(key)) {
+                ans.put(key, new ArrayList());
+            }
+            ans.get(key).add(s);
         }
-		public final int hashCode() {
-			
-		}
-		
-	}
+        return new ArrayList(ans.values());
+    }
 }
