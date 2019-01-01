@@ -9,8 +9,8 @@
  *----------------------------------------------------------------------------*/
 package leetcode.titi.solution.prob295;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class MedianFinderTest {
     private MedianFinder medianFinder = new MedianFinder();
@@ -18,19 +18,19 @@ public class MedianFinderTest {
     @Test
     public void test() {
 	medianFinder.addNum(12);
-	Assert.assertTrue(12.0 == medianFinder.findMedian());
+	Assertions.assertTrue(12.0 == medianFinder.findMedian());
 	medianFinder.addNum(10);
-	Assert.assertTrue(11.0 == medianFinder.findMedian());
+	Assertions.assertTrue(11.0 == medianFinder.findMedian());
 	medianFinder.addNum(13);
-	Assert.assertTrue(12.0 == medianFinder.findMedian());
+	Assertions.assertTrue(12.0 == medianFinder.findMedian());
 	medianFinder.addNum(11);
-	Assert.assertTrue(11.5 == medianFinder.findMedian());
+	Assertions.assertTrue(11.5 == medianFinder.findMedian());
 	medianFinder.addNum(5);
-	Assert.assertTrue(11.0 == medianFinder.findMedian());
+	Assertions.assertTrue(11.0 == medianFinder.findMedian());
 	medianFinder.addNum(15);
-	Assert.assertTrue(11.5 == medianFinder.findMedian());
+	Assertions.assertTrue(11.5 == medianFinder.findMedian());
 	medianFinder.addNum(10);
-	Assert.assertTrue(11.0 == medianFinder.findMedian());
+	Assertions.assertTrue(11.0 == medianFinder.findMedian());
     }
 
 }

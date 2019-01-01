@@ -1,10 +1,8 @@
 package leetcode.titi.solution.prob315;
 
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
-
-import org.junit.Test;
 
 public class SmallerNumsAfterSelfSolutionTest {
 	private SmallerNumsAfterSelfSolution solution = new SmallerNumsAfterSelfSolution();

@@ -9,9 +9,8 @@
  *----------------------------------------------------------------------------*/
 package leetcode.titi.solution.prob3;
 
-import junit.framework.Assert;
-
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class TestProb3Solution {
 
@@ -23,23 +22,23 @@ public class TestProb3Solution {
         String s4 = "cbb";
         String s5 = "abcb";
         String s6 = "uqinntq";
-        Assert.assertTrue(Prob3Solution.lengthOfLongestSubstring(s1).getKey() == 3);
-        Assert.assertEquals(Prob3Solution.lengthOfLongestSubstring(s1).getValue(), "abc");
+        Assertions.assertTrue(Prob3Solution.lengthOfLongestSubstring(s1).getKey() == 3);
+        Assertions.assertEquals(Prob3Solution.lengthOfLongestSubstring(s1).getValue(), "abc");
 
-        Assert.assertTrue(Prob3Solution.lengthOfLongestSubstring(s2).getKey() == 3);
-        Assert.assertEquals(Prob3Solution.lengthOfLongestSubstring(s2).getValue(), "wke");
+        Assertions.assertTrue(Prob3Solution.lengthOfLongestSubstring(s2).getKey() == 3);
+        Assertions.assertEquals(Prob3Solution.lengthOfLongestSubstring(s2).getValue(), "wke");
 
-        Assert.assertTrue(Prob3Solution.lengthOfLongestSubstring(s3).getKey() == 1);
-        Assert.assertEquals(Prob3Solution.lengthOfLongestSubstring(s3).getValue(), "b");
+        Assertions.assertTrue(Prob3Solution.lengthOfLongestSubstring(s3).getKey() == 1);
+        Assertions.assertEquals(Prob3Solution.lengthOfLongestSubstring(s3).getValue(), "b");
 
-        Assert.assertTrue(Prob3Solution.lengthOfLongestSubstring(s4).getKey() == 2);
-        Assert.assertEquals(Prob3Solution.lengthOfLongestSubstring(s4).getValue(), "cb");
+        Assertions.assertTrue(Prob3Solution.lengthOfLongestSubstring(s4).getKey() == 2);
+        Assertions.assertEquals(Prob3Solution.lengthOfLongestSubstring(s4).getValue(), "cb");
 
-        Assert.assertTrue(Prob3Solution.lengthOfLongestSubstring(s5).getKey() == 3);
-        Assert.assertEquals(Prob3Solution.lengthOfLongestSubstring(s5).getValue(), "abc");
+        Assertions.assertTrue(Prob3Solution.lengthOfLongestSubstring(s5).getKey() == 3);
+        Assertions.assertEquals(Prob3Solution.lengthOfLongestSubstring(s5).getValue(), "abc");
 
-        Assert.assertTrue(Prob3Solution.lengthOfLongestSubstring(s6).getKey() == 4);
-        Assert.assertEquals(Prob3Solution.lengthOfLongestSubstring(s6).getValue(), "uqin");
+        Assertions.assertTrue(Prob3Solution.lengthOfLongestSubstring(s6).getKey() == 4);
+        Assertions.assertEquals(Prob3Solution.lengthOfLongestSubstring(s6).getValue(), "uqin");
     }
 
 }

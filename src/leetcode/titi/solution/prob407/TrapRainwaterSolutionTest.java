@@ -9,9 +9,8 @@
  *----------------------------------------------------------------------------*/
 package leetcode.titi.solution.prob407;
 
-import junit.framework.Assert;
-
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Assertions;
 
 public class TrapRainwaterSolutionTest {
     private int[][] heightMap = { { 1, 4, 3, 1, 3, 2 }, { 3, 2, 1, 3, 2, 4 }, { 2, 3, 3, 2, 3, 1 } };
@@ -20,7 +19,7 @@ public class TrapRainwaterSolutionTest {
     @Test
     public void test() {
 	int waterVolume = solution.trapRainWater(heightMap);
-	Assert.assertEquals(4, waterVolume);
+	Assertions.assertEquals(4, waterVolume);
     }
 
     /*@Test

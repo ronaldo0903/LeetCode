@@ -9,18 +9,17 @@
  *----------------------------------------------------------------------------*/
 package leetcode.titi.solution.prob224;
 
-import junit.framework.Assert;
-
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Assertions;
 
 public class BasicCalculatorTest {
 
     @Test
     public void test() {
-	String simpleExpression = "15 2+8 -1 0";
-	String complexExpression = "(1+(4+5+2)-3)+(6+8)";
-	Assert.assertTrue(BasicCalculator.calculate(simpleExpression) == 150);
-	Assert.assertEquals(23, BasicCalculator.calculate(complexExpression));
+        String simpleExpression = "15 2+8 -1 0";
+        String complexExpression = "(1+(4+5+2)-3)+(6+8)";
+        Assertions.assertTrue(BasicCalculator.calculate(simpleExpression) == 150);
+        Assertions.assertEquals(23, BasicCalculator.calculate(complexExpression));
     }
 
 }

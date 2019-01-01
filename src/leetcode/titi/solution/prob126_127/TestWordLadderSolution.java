@@ -12,7 +12,7 @@ package leetcode.titi.solution.prob126_127;
 import java.util.Arrays;
 import java.util.List;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class TestWordLadderSolution {
     private WordLadderSolution solution = new WordLadderSolution();

@@ -9,9 +9,8 @@
  *----------------------------------------------------------------------------*/
 package leetcode.titi.solution.prob200;
 
-import junit.framework.Assert;
-
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Assertions;
 
 public class TestNumOfIslandsSolution {
     private char[][] islandA = { { '1', '1', '0', '0', '0' }, { '1', '1', '0', '0', '0' }, { '0', '0', '1', '0', '0' },
@@ -22,8 +21,8 @@ public class TestNumOfIslandsSolution {
 
     @Test
     public void test() {
-	Assert.assertEquals(3, solution.numIslands(islandA));
-	Assert.assertEquals(1, solution.numIslands(islandB));
+	Assertions.assertEquals(3, solution.numIslands(islandA));
+	Assertions.assertEquals(1, solution.numIslands(islandB));
     }
 
 }

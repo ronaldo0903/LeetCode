@@ -1,10 +1,8 @@
 package leetcode.titi.solution.prob51;
 
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
-
-import org.junit.Test;
 
 public class NQueenSolutionTest {
 	private NQueenSolution solution = new NQueenSolution();

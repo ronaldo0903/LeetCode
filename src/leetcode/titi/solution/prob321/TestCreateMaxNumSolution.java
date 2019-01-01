@@ -1,8 +1,7 @@
 package leetcode.titi.solution.prob321;
 
-import static org.junit.Assert.*;
-
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class TestCreateMaxNumSolution {
 	
@@ -13,7 +12,7 @@ public class TestCreateMaxNumSolution {
 		int k = 5;
 		int[] result = CreateMaximumNumberSolution.maxNumber(nums1, nums2, k);
 		int[] expected = {9,8,6,5,3};
-		assertArrayEquals(expected, result);
+		Assertions.assertArrayEquals(expected, result);
 	}
 
 	@Test
@@ -23,7 +22,7 @@ public class TestCreateMaxNumSolution {
 		int k = 5;
 		int[] result = CreateMaximumNumberSolution.maxNumber(nums1, nums2, k);
 		int[] expected = {6,7,6,0,4};
-		assertArrayEquals(expected, result);
+		Assertions.assertArrayEquals(expected, result);
 	}
 	
 	@Test
@@ -33,7 +32,7 @@ public class TestCreateMaxNumSolution {
 		int k = 3;
 		int[] result = CreateMaximumNumberSolution.maxNumber(nums1, nums2, k);
 		int[] expected = {9,8,9};
-		assertArrayEquals(expected, result);
+		Assertions.assertArrayEquals(expected, result);
 	}
 	@Test
 	public void testWithMultipleDuplicatedNums() {
@@ -42,7 +41,7 @@ public class TestCreateMaxNumSolution {
 		int k = 5;
 		int[] result = CreateMaximumNumberSolution.maxNumber(nums1, nums2, k);
 		int[] expected = {8,7,5,3,2};
-		assertArrayEquals(expected, result);
+		Assertions.assertArrayEquals(expected, result);
 	}
 	
 	@Test
@@ -52,7 +51,7 @@ public class TestCreateMaxNumSolution {
 		int k = 6;
 		int[] result = CreateMaximumNumberSolution.maxNumber(nums1, nums2, k);
 		int[] expected = {6,8,6,4,5,2};
-		assertArrayEquals(expected, result);
+		Assertions.assertArrayEquals(expected, result);
 	}
 	
 	@Test
@@ -62,7 +61,7 @@ public class TestCreateMaxNumSolution {
 		int k = 15;
 		int[] result = CreateMaximumNumberSolution.maxNumber(nums1, nums2, k);
 		int[] expected = {7,3,8,2,5,6,4,4,0,6,5,7,6,2,0};
-		assertArrayEquals(expected, result);
+		Assertions.assertArrayEquals(expected, result);
 	}
 
 }

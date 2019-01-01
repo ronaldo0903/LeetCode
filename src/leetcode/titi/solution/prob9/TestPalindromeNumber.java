@@ -1,19 +1,17 @@
 package leetcode.titi.solution.prob9;
 
-import static org.junit.Assert.*;
-import junit.framework.Assert;
-
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class TestPalindromeNumber {
 
 	@Test
 	public void test() {
-		Assert.assertTrue(PalindromeNumber.isPalindrome(101));
-		Assert.assertTrue(PalindromeNumber.isPalindrome(52344325));
-		//Assert.assertFalse(PalindromeNumber.isPalindrome(-2147447412));
-		Assert.assertFalse(PalindromeNumber.isPalindrome(1000021));
-		Assert.assertTrue(PalindromeNumber.isPalindrome(100212001));
+		Assertions.assertTrue(PalindromeNumber.isPalindrome(101));
+		Assertions.assertTrue(PalindromeNumber.isPalindrome(52344325));
+		//Assertions.assertFalse(PalindromeNumber.isPalindrome(-2147447412));
+		Assertions.assertFalse(PalindromeNumber.isPalindrome(1000021));
+		Assertions.assertTrue(PalindromeNumber.isPalindrome(100212001));
 	}
 
 }

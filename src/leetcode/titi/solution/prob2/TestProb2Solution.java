@@ -1,8 +1,7 @@
 package leetcode.titi.solution.prob2;
 
-import junit.framework.Assert;
-
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Assertions;
 
 public class TestProb2Solution {
     @Test
@@ -22,7 +21,7 @@ public class TestProb2Solution {
         ListNode resultNode = Prob2Solution.addTwoNumbers(node_1_1, node_2_1);
 
         System.out.println(resultNode.toString());
-        Assert.assertTrue(resultNode.toString().equals("708"));
+        Assertions.assertTrue(resultNode.toString().equals("708"));
     }
 
     @Test
@@ -51,7 +50,7 @@ public class TestProb2Solution {
         node_2_9.setNext(node_2_10);
 
         ListNode resultNode = Prob2Solution.addTwoNumbers(node_1_1, node_2_1);
-        Assert.assertTrue(resultNode.toString().equals("00000000001"));
+        Assertions.assertTrue(resultNode.toString().equals("00000000001"));
 
     }
 
