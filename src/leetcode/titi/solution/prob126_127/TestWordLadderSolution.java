@@ -9,9 +9,11 @@
  *----------------------------------------------------------------------------*/
 package leetcode.titi.solution.prob126_127;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import jdk.nashorn.internal.ir.annotations.Ignore;
 import org.junit.jupiter.api.Test;
 
 public class TestWordLadderSolution {
@@ -237,23 +239,24 @@ public class TestWordLadderSolution {
 	    "elms", "deon", "sims", "quit", "nest", "font", "dues", "yeas", "zeta", "bevy", "gent", "torn", "cups",
 	    "worm", "baum", "axon", "purr", "vise", "grew", "govs", "meat", "chef", "rest", "lame" };
 
-    private String[] wordArray2 = { "hot", "dot", "dog", "lot", "log" };
+    private String[] wordArray2 = { "hot", "dot", "dog", "lot", "log", "cog" };
 
-    private List<String> wordList = Arrays.asList(wordArray);
-    private List<String> wordList2 = Arrays.asList(wordArray2);
+    private List<String> wordList = new ArrayList(Arrays.asList(wordArray));
+    private List<String> wordList2 = new ArrayList<>(Arrays.asList(wordArray2));
 
     @Test
     public void testLenthOfLadder() {
 	int minSteps = solution.ladderLength2("hit", "cog", wordList2);
 	System.out.println(minSteps);
 
-	/*minSteps = solution.ladderLength("sand", "acne", wordList);
-	System.out.println(minSteps);*/
+	minSteps = solution.ladderLength("sand", "acne", wordList);
+	System.out.println(minSteps);
     }
 
     @Test
     public void testGetLadders() {
-	List<List<String>> ladders = solution.findLadders("sand", "acne", wordList);
+	//List<List<String>> ladders = solution.findLadders("sand", "acne", wordList);
+	List<List<String>> ladders = solution.findLadders("hit", "cog", wordList2);
 	System.out.println(ladders.toString());
     }
 

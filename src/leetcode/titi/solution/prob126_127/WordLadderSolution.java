@@ -180,6 +180,7 @@ public class WordLadderSolution {
 	while (front != pathVector.size()) {
 	    QItem nodeItem = pathVector.get(front);
 	    int step = nodeItem.steps;
+	    if(min_steps != 0 && step > min_steps) break;
 	    if (nodeItem.key.equals(endWord)) {
 		min_steps = step;
 		endWordPosVector.add(front);
